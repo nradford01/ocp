@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  host: db
+  username: postgres
+  password: password
+  database: barcoder_dev
+  pool: 100
+
+test:
+  adapter: postgresql
+  host: db
+  username: postgres
+  password: password
+  database: barcoder_tst
+  pool: 100

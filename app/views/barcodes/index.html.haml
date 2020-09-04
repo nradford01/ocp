@@ -1,0 +1,20 @@
+=@sucess_count
+.pull-right
+  =link_to "Import barcodes", [:new, :barcode], :class => "btn btn-default"
+  =link_to "Generate new barcodes", [:generate, :barcodes], :class => "btn btn-default"
+
+%h1
+  Barcodes
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Id
+      %th Barcode
+      %th Source
+  %tbody
+  -Barcode.order(:id).each do |barcode|
+    %tr
+      %td=barcode.id
+      %td=barcode.barcode
+      %td=barcode.source
