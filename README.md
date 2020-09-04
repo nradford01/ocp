@@ -65,6 +65,15 @@ The website can be opened at http://localhost:3000. The docker-compose.yml is mo
 
 Good luck and happy coding! :)
 
-Difficulties: Getting the docker container running. specifically there were issues when connecting to postgres in the container as the default postgres user does not start with a password. 
+#### Difficulties: 
+Getting the docker container running. specifically there were issues when connecting to postgres in the container as the default postgres user does not start with a password. I have now altered the db connection to send through a password.
+ To solve run:
+ docker exec -it ocp_coding_challenge-master_db_1 /bin/bash
+ psql -U postgres
+ ALTER ROLE postgres WITH PASSWORD 'password';
 
-Improvements: The is_ean8 validation could be pulled into a validation service instead of put directly in the model. The front end could get some styling. I could write some tests (If this were a production level app I would not dream of not writing tests, but I spent so long arguing with docker that I am over the 4 hour time limit)
+
+
+
+#### Improvements: 
+The is_ean8 validation could be pulled into a validation service instead of put directly in the model. The front end could get some styling. I could write some tests (If this were a production level app I would not dream of not writing tests, but I spent so long arguing with docker that I am over the 4 hour time limit)
