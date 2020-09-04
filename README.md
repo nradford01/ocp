@@ -67,10 +67,10 @@ Good luck and happy coding! :)
 
 #### Difficulties: 
 Getting the docker container running. specifically there were issues when connecting to postgres in the container as the default postgres user does not start with a password. I have now altered the db connection to send through a password.
- To solve run:
- docker exec -it ocp_coding_challenge-master_db_1 /bin/bash
- psql -U postgres
- ALTER ROLE postgres WITH PASSWORD 'password';
+* To solve run:
+  * docker exec -it ocp_coding_challenge-master_db_1 /bin/bash
+  * psql -U postgres
+  * ALTER ROLE postgres WITH PASSWORD 'password';
 
 
 
